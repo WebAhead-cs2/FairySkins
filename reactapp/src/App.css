@@ -2,6 +2,11 @@
   text-align: center;
 }
 
+.word {
+  color: #4b5aca;
+  text-align: left;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
