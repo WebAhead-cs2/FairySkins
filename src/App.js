@@ -4,7 +4,7 @@ import Login from './loginPage/componentLogin';
 import './App.css';
 import React, { useEffect, useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import data from '/home/joumana/project3-fairyskins/src/data.js'
+import data from './data.js'
 function App() {
 //**********from mohammed */********* */
  /* const [backendData, setBackendData] = useState([{}])
