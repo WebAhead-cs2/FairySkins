@@ -1,6 +1,6 @@
 
 import './styleItemsList.css';
-import data from '/home/joumana/project3-fairyskins/src/data.js'
+import data from '../data.js'
 function ItemsList({ catFilter, priceFilter})
 {console.log(catFilter);
     
