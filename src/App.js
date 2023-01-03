@@ -1,6 +1,7 @@
 import Home from './homePage/componentHome';
 import Signup from './signupPage/componentSignup';
 import Login from './loginPage/componentLogin';
+import Profile from './profilePage/componentProfile';
 import './App.css';
 import React, { useEffect, useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -23,7 +24,8 @@ const [backendData, setBackendData] = useState([{}])
     useEffect(()=>{
       const requestOptions = {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json' ,
+        'Accept': 'application/json' },
         body: JSON.stringify({ products: data })
     };
       fetch("/productList",requestOptions).then(
@@ -41,6 +43,7 @@ const [backendData, setBackendData] = useState([{}])
     <Route exact path="/home" element={<Home/>}/>
     <Route exact path="/signup" element={<Signup/>}/>
     <Route exact path="/login" element={<Login/>}/>
+    <Route exact path="/profile" element={<Profile/>}/>
     </Routes>
     </Router>
   );
