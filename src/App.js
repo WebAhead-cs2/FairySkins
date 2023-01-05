@@ -2,6 +2,7 @@ import Home from './homePage/componentHome';
 import Signup from './signupPage/componentSignup';
 import Login from './loginPage/componentLogin';
 import Profile from './profilePage/componentProfile';
+import Payment from './components/payment/payment';
 import './App.css';
 import React, { useEffect, useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -44,6 +45,7 @@ const [backendData, setBackendData] = useState([{}])
     <Route exact path="/signup" element={<Signup/>}/>
     <Route exact path="/login" element={<Login/>}/>
     <Route exact path="/profile" element={<Profile/>}/>
+    <Route exact path="/payment" element={<Payment/>}/>
     </Routes>
     </Router>
   );

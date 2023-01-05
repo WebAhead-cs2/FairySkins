@@ -1,30 +1,31 @@
+import Navbar from "../navbar";
 function pay() {
     return (
         <>
     <section>
     <Navbar/>
     </section>
-        <form className="signupForm" onSubmit={handleSubmit}>
+        <form className="signupForm" onSubmit="handleSubmit">
             <h1>Payment page</h1>
             <br/>
             <label className="USER" for="cardHoldersName">Card Holde's Name</label>
             <br/>
-            <input className="word" value={cardHoldersName} />
+            <input className="word" placeholder="cardHoldersName" />
             <br/>
             <br/>
             <label className="USER" for="cardNumber">Card Number</label>
             <br/>
-            <input className="word" value={cardNumber} />
+            <input className="word" placeholder="cardNumber" />
             <br/>
             <br/>
             <label className="USER" for="expairationDate">Expairation Date</label>
             <br/>
-            <input className="word" value={expairationDate} />
+            <input className="word" placeholder="expairationDate" />
             <br/>
             <br/>
             <label className="USER" for="cvc">CVC</label>
             <br/>
-            <input className="word" value={cvc} />
+            <input className="word" placeholder="cvc" />
             <br/>
             <br/>
             <br/>
