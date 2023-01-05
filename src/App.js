@@ -1,10 +1,11 @@
 import Home from './homePage/componentHome';
 import Signup from './signupPage/componentSignup';
 import Login from './loginPage/componentLogin';
+import ComponentCart from './cart/componentCart';
 import './App.css';
 import React, { useEffect, useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import data from '/home/joumana/project3-fairyskins/src/data.js'
+import data from '/home/mohammad/proj_3/FairySkins/src/data.js'
 function App() {
 //**********from mohammed */********* */
  /* const [backendData, setBackendData] = useState([{}])
@@ -41,6 +42,7 @@ const [backendData, setBackendData] = useState([{}])
     <Route exact path="/home" element={<Home/>}/>
     <Route exact path="/signup" element={<Signup/>}/>
     <Route exact path="/login" element={<Login/>}/>
+    <Route exact path="/cart" element={<ComponentCart/>}/>
     </Routes>
     </Router>
   );

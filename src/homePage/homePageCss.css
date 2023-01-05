@@ -12,6 +12,7 @@
    
 }
 .filters {
+  margin-top: 60px;
     flex-basis: 10rem;
     flex-grow: 1;
     padding: 2rem;
@@ -26,6 +27,7 @@
     min-height: 100vh;
     display: flex;
     flex-wrap: wrap;
+    padding: 15px;
   }
   form {
     position: sticky;

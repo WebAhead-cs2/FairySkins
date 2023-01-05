@@ -1,8 +1,13 @@
 import './styleNavbar.css';
+import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+
 import React from 'react';
 function Navbar()
 {
+  // if(state.state!=null){
+  //    const {state} = useLocation();
+  //    const { cart} = state;}
   return(
     <div className="Page">
     <div className="Container">
@@ -20,7 +25,11 @@ function Navbar()
      <Link to="/history" className="MenuItem">History</Link>
      </div>
      <div className="Right">
-      
+
+
+        <Link to="/cart">
+        <button></button>
+        </Link>
         <img className='signupimage' src='https://cdn-icons-png.flaticon.com/128/748/748137.png'></img>
         <Link to="/signup">
        <button  className="userb"  variant="contained">Signup</button>

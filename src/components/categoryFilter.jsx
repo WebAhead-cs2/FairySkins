@@ -1,4 +1,4 @@
-const categories = [
+const categories = [,
     "all",
     "Face",
     "Eye",
@@ -9,8 +9,8 @@ const categories = [
     "Brushes & Applicators",
     "Accessories", 
     "Nail",
-    "Vegan",
     "Mini Size",
+    "vegan"
   ];
 
   function CategoryFilter({ catFilter, setCatFilter }) {

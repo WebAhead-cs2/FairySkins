@@ -1,6 +1,9 @@
 
+import { useState } from 'react';
 import './styleItemsList.css';
-import data from '/home/joumana/project3-fairyskins/src/data.js'
+import ProductList from './productList';
+import data from '/home/mohammad/proj_3/FairySkins/src/data.js'
+
 function ItemsList({ catFilter, priceFilter})
 {console.log(catFilter);
     
@@ -40,6 +43,7 @@ function Products({ catFilter, priceFilter})
    
     return (
         <ul className="grid">
+            
             <ProductsCards catFilter={catFilter} priceFilter={priceFilter}></ProductsCards>
         {/* {productsList.length ? (
           productsList
@@ -51,25 +55,18 @@ function Products({ catFilter, priceFilter})
       </ul>
     );
 }
-function ProductsCards({ catFilter, priceFilter})
+function ProductsCards({catFilter, priceFilter})
 {
+  
     const [minPrice, maxPrice] = priceFilter;
-console.log(catFilter);
+
+
     let productsList= data.filter((item) => catFilter === "all" || catFilter === item.category)
     .filter((item) => Number(item.price.substring(1)) >= minPrice && Number(item.price.substring(1)) <= maxPrice)
-     .map((item)=> <li class = "card" key = {item.id}>
-    <div class = "product-img">
-        <img src = {item.image} alt = "makeup"></img>
-    </div>
-    <div class = "item-name">
-        <p>{item.category}</p>
-        <h3>{item.name}</h3>
-        <p>{item.price}</p>
-        <a href = "#" class = "buy-btn">
-            <img class="cartIcon" src="https://cdn-icons-png.flaticon.com/128/2438/2438133.png"></img>
-        </a>
-    </div>
-</li>
+     .map((item)=>
+      <ProductList />
+     
+     
 );
    return(
     productsList

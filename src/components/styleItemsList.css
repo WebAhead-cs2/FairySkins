@@ -1,29 +1,40 @@
-.grid
-{
-    top:100px
+
+.container{
+  display: grid;
+  padding: 10px;
+  grid-template-columns: auto auto auto; 
+  padding-top: 50px;
 }
 .card
-{
+{ 
+ border: 2px solid black;
+ padding: 15px;
+ text-align: center;
+ margin : 10px;
+
+
+
+  /* 
+  
     top:inherit;
     position: relative;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
+    
     grid-gap: 0.25rem;
     box-shadow: 0.5rem 0.5rem 0 var(--orange);
-    border: 0.25rem solid black;
-    padding: 1rem;
-    background-color: #fff;
     
+    padding: 10px;
+    background-color: #fff;
+     */
 
 }
-.grid {
+/* .grid {
     margin-top: 1rem;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
     grid-gap: 2rem;
     grid-gap: clamp(2rem, 2rem + 1vw, 4rem);
     align-content: start;
-  }
+  } */
   .cartIcon
   {
     width: 20%;

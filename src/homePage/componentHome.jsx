@@ -1,6 +1,7 @@
 import'./homePageCss.css';
 import Navbar from '../components/navbar';
-import ItemsList from '../components/itemsList';
+// import ItemsList from '../components/itemsList';
+import List from '../components/list';
 import CategoryFilter from "../components/categoryFilter";
 import PriceFilter from "../components/priceFilter";
 import React from "react";
@@ -16,7 +17,7 @@ function Home()
 
 
     <section className="filters">
-        <h1>m</h1>
+        
         <form>
         <PriceFilter
             priceFilter={priceFilter}
@@ -27,7 +28,7 @@ function Home()
       </section>
 
     <section className="listProducts">
-    <ItemsList catFilter={catFilter} priceFilter={priceFilter}/>
+    <List catFilter={catFilter} priceFilter={priceFilter}/>
     </section>
     </main>
    
