@@ -1,14 +1,14 @@
 const data =[
-{"id":"P97989778","image":"https://www.sephora.com/productimages/sku/s2518959-main-grid.jpg?pb=allure-2022-bestofbeauty-badge","name":"Rare Beauty by Selena Gomez","price":"$20.00","category":"Face"},
-{"id":"P503679","image":"https://www.sephora.com/productimages/sku/s2620235-main-grid.jpg","name":"MAKEUP BY MARIO","price":"$42.00","category":"Face"},
-{"id":"P434104","image":"https://www.sephora.com/productimages/sku/s2419786-main-grid.jpg","name":"Charlotte Tilbury","price":" $46.00","category":"Face"},
-{"id":"P38855877","image":"https://www.sephora.com/productimages/sku/s2362168-main-grid.jpg","name":"Rare Beauty by Selena Gomez","price":"$22.00","category":"Face"},
-{"id":"P503714","image":"https://www.sephora.com/productimages/sku/s2629418-main-grid.jpg","name":"Rare Beauty by Selena Gomez","price":"$24.00","category":"Face"},
-{"id":"P433526","image":"https://www.sephora.com/productimages/sku/s2606085-main-grid.jpg","name":"Charlotte Tilbury","price":"$26.00","category":"Face"},
-{"id":"P456151","image":"https://www.sephora.com/productimages/sku/s2333771-main-grid.jpg?pb=clean-planet-positive-badge-2021","name":"Kosas","price":"$15.00 - $28.00","category":"Face"}
-,{"id":"P377873","image":"https://www.sephora.com/productimages/sku/s2172310-main-grid.jpg","name":"NARS","price":"$14.00 ","category":"Face"},
-{"id":"P461147","image":"https://www.sephora.com/productimages/sku/s2368439-main-grid.jpg","name":"Charlotte Tilbury","price":"$ $36.00","category":"Face"},
-{"id":"P434002","image":"https://www.sephora.com/productimages/sku/s2115954-main-grid.jpg","name":"Charlotte Tilbury","price":"$40.00","category":"Face"},
+// {"id":"P97989778","image":"https://www.sephora.com/productimages/sku/s2518959-main-grid.jpg?pb=allure-2022-bestofbeauty-badge","name":"Rare Beauty by Selena Gomez","price":20.00,"category":"Face"},
+// {"id":"P503679","image":"https://www.sephora.com/productimages/sku/s2620235-main-grid.jpg","name":"MAKEUP BY MARIO","price":42.00,"category":"Face"},
+// {"id":"P434104","image":"https://www.sephora.com/productimages/sku/s2419786-main-grid.jpg","name":"Charlotte Tilbury","price":46.00,"category":"Face"},
+// {"id":"P38855877","image":"https://www.sephora.com/productimages/sku/s2362168-main-grid.jpg","name":"Rare Beauty by Selena Gomez","price":22.00,"category":"Face"},
+// {"id":"P503714","image":"https://www.sephora.com/productimages/sku/s2629418-main-grid.jpg","name":"Rare Beauty by Selena Gomez","price":24.00,"category":"Face"},
+// {"id":"P433526","image":"https://www.sephora.com/productimages/sku/s2606085-main-grid.jpg","name":"Charlotte Tilbury","price":26.00,"category":"Face"},
+// {"id":"P456151","image":"https://www.sephora.com/productimages/sku/s2333771-main-grid.jpg?pb=clean-planet-positive-badge-2021","name":"Kosas","price": 28.00,"category":"Face"}
+// ,{"id":"P377873","image":"https://www.sephora.com/productimages/sku/s2172310-main-grid.jpg","name":"NARS","price":14.00,"category":"Face"},
+// {"id":"P461147","image":"https://www.sephora.com/productimages/sku/s2368439-main-grid.jpg","name":"Charlotte Tilbury","price":36.00,"category":"Face"},
+// {"id":"P434002","image":"https://www.sephora.com/productimages/sku/s2115954-main-grid.jpg","name":"Charlotte Tilbury","price":40.00,"category":"Face"},
 
 
 {"id":"P503713","image":"https://www.sephora.com/productimages/sku/s2629418-main-grid.jpg","name":"Rare Beauty by Selena Gomez","price":"$24.00","category":"Eye"},

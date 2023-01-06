@@ -4,7 +4,7 @@ import Login from './loginPage/componentLogin';
 import ComponentCart from './cart/componentCart';
 import './App.css';
 import React, { useEffect, useState } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import data from '/home/mohammad/proj_3/FairySkins/src/data.js'
 function App() {
 //**********from mohammed */********* */
@@ -36,6 +36,7 @@ const [backendData, setBackendData] = useState([{}])
         }
       )
     }, [] )
+    const {productItems}= data ;
   return (
     <Router>
     <Routes>

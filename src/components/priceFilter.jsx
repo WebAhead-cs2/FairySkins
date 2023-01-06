@@ -1,4 +1,5 @@
 import React from "react";
+import './stylePriceFilter.css'
 
 function PriceFilter({ priceFilter, setPriceFilter }) {
   return (
