@@ -5,6 +5,11 @@
   position: relative;
 
 }
+
+body{ 
+  text-align: center;
+}
+
 .user{
     text-align: left;
     color: blue;
