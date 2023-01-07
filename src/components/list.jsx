@@ -36,7 +36,7 @@ function List({catFilter,priceFilter}) {
     <div > 
       
         {/* <button onClick={()=> navigate(PAGE_CART)} >cart {cart.length}</button> */}
-        <button onClick={()=> navigateTo(PAGE_PRODUCTS)} >products</button>
+        {/* <button onClick={()=> navigateTo(PAGE_PRODUCTS)} >products</button> */}
         
         {page === PAGE_PRODUCTS
          &&( <ProductList catFilter={catFilter} priceFilter={priceFilter} addToCart={addToCart} />)}    

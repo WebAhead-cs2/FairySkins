@@ -22,7 +22,7 @@
   }
   .bottom{
     align-content: center;
-    margin-left: 500px;
+    margin-left: 400px;
   }
   .total{
     color:#541847;
@@ -48,4 +48,17 @@
     padding: 8px;
     text-align: left;
     border-bottom: 1px solid #ddd;
+  }
+  main{
+    margin-top: 70px;
+  }
+  .button3{
+    height: 40px;
+    width: 120px;
+    background-color: red;
+    color: black;
+    border-radius: 45px;
+    font-weight: bolder;
+
+
   }

@@ -9,11 +9,11 @@ export default function ProductList({ addToCart, priceFilter, catFilter }) {
       <div className="container">
         {data
           .filter((item) => catFilter === "all" || catFilter === item.category)
-          // .filter(
-          //   (item) =>
-          //     Number(item.price.substring(1)) >= minPrice &&
-          //     Number(item.price.substring(1)) <= maxPrice
-          // )
+          .filter(
+            (item) =>
+              Number(item.price) >= minPrice &&
+              Number(item.price) <= maxPrice
+          )
           .map((product, idx) => (
             <div class="card" key={idx}>
               <img src={product.image} alt={product.name} />

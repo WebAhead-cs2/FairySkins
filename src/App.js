@@ -1,6 +1,7 @@
 import Home from './homePage/componentHome';
 import Signup from './signupPage/componentSignup';
 import Login from './loginPage/componentLogin';
+import History from './history/History';
 import ComponentCart from './cart/componentCart';
 import './App.css';
 import React, { useEffect, useState } from 'react'
@@ -44,6 +45,7 @@ const [backendData, setBackendData] = useState([{}])
     <Route exact path="/signup" element={<Signup/>}/>
     <Route exact path="/login" element={<Login/>}/>
     <Route exact path="/cart" element={<ComponentCart/>}/>
+    <Route exact path="/history" element={<History/>}/>
     </Routes>
     </Router>
   );
