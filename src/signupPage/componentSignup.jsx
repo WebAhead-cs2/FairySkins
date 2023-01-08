@@ -3,11 +3,13 @@ import "./signup.css";
 import Navbar from "../components/navbar";
 import { Link } from "react-router-dom";
 import React, { useEffect, useState } from "react";
+import { Navigate } from "react-router-dom";
 function Signup() {
   const [username, setUser] = useState("");
   const [email, setEmail] = useState("");
   const [phonenumber, setPhonenum] = useState("");
   const [password, setPass] = useState("");
+  const [redirect, setredirect] = useState();
 
   return (
     <>
@@ -69,13 +71,18 @@ function Signup() {
         <br />
         <br />
         <br />
+
         <button
           type="submit"
-          onClick={() => SaveChanges(username, email, phonenumber, password)}
+          onClick={() => {
+            SaveChanges(username, email, phonenumber, password);
+            setredirect(true);
+          }}
           className="signup"
         >
           Signup
         </button>
+        <LoginPage redirect={redirect} />
         <p className="txt">
           <Link to="/login">Already have an account?</Link>
         </p>
@@ -83,7 +90,18 @@ function Signup() {
     </>
   );
 }
-
+function LoginPage({ redirect }) {
+  if (redirect == true) {
+    return (
+      <main>
+        <h1>Registration Success</h1>
+        <Navigate to="/login" replace={true} />
+      </main>
+    );
+  } else {
+    return null;
+  }
+}
 function SaveChanges(username, email, phonenumber, password) {
   const requestOptions = {
     method: "POST",

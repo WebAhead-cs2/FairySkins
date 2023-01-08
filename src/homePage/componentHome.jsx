@@ -34,9 +34,12 @@ function Home() {
   );
 }
 export function CorrectNavbar(state) {
+  let email;
   if (state != null) {
-    const { email } = state;
-
+    email = state.email;
+    while (email != undefined && email.email != undefined) {
+      email = email.email;
+    }
     return <Navbar email={email} />;
   } else return <Navbar email={null} />;
 }

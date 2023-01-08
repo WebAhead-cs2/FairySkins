@@ -4,14 +4,18 @@ import "./styleCart.css";
 import Navbar from "../components/navbar";
 import { useLocation } from "react-router-dom";
 import { CorrectNavbar } from "../homePage/componentHome";
+import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 export default function Cart() {
+  const [redirect, setredirect] = useState();
   const location = useLocation();
+
   const state = location.state;
   let email;
 
   if (state != null) {
     email = state.email;
-    while (email.email != undefined) {
+    while (email != undefined && email.email != undefined) {
       email = email.email;
     }
   }
@@ -43,28 +47,26 @@ export default function Cart() {
   //   useEffect(() => {
   //     localStorage.setItem("cart", JSON.stringify(cart));
   //   }, [cart]);
-  let getCart;
-  useEffect(() => {
-    getCart = async () => {
-      //console.log(email);
-      //setCart(cart.filter((product) => product !== productToremove));
-      const requestOptions = {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
-          email: email,
-        }),
-      };
-      await fetch("/getCart", requestOptions)
-        .then((response) => response.json())
-        .then((data) => {
-          setCart(data.cart);
-        });
+
+  let getCart = async () => {
+    //console.log(email);
+    //setCart(cart.filter((product) => product !== productToremove));
+    const requestOptions = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        email: email,
+      }),
     };
-  }, [cart]);
+    await fetch("/getCart", requestOptions)
+      .then((response) => response.json())
+      .then((data) => {
+        setCart(data.cart);
+      });
+  };
 
   //********************newwwwww****** */
   const addToHistory = async () => {
@@ -108,9 +110,9 @@ export default function Cart() {
     return cart.reduce((sum, { price }) => sum + +price, 0);
   };
   //************************************ */
-  useEffect(() => {
-    getCart();
-  });
+  //useEffect(() => {
+  getCart();
+  // });
   return (
     <>
       <section>{CorrectNavbar(state)}</section>
@@ -141,9 +143,15 @@ export default function Cart() {
         <div className="bottom">
           <p className="total">Total : ${getTotalsum()} </p>
           <button className="buttons button1">Continue Shopping</button>
-          <button onClick={() => addToHistory()} className="buttons button2">
+          <button
+            onClick={() => {
+              addToHistory().then(setredirect(true));
+            }}
+            className="buttons button2"
+          >
             Check Out
           </button>
+          <AnotherPage redirect={redirect} email={email} />
           <p className="terms">
             By selecting ‘Check Out’ you are agreeing to our Terms & Conditions
           </p>
@@ -151,4 +159,12 @@ export default function Cart() {
       </main>
     </>
   );
+}
+function AnotherPage({ redirect, email }) {
+  const navigate = useNavigate();
+  if (redirect == true) {
+    return navigate("/payment", { state: { email: email } });
+  } else {
+    return null;
+  }
 }

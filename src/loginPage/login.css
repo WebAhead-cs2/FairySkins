@@ -7,3 +7,7 @@
   background-repeat: no-repeat;
   size: 200%;
 }
+.PassWrong {
+  color: red;
+  font-size: small;
+}

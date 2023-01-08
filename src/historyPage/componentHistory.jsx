@@ -13,9 +13,9 @@ function History() {
   );
   const [history, setHistory] = useState(historyFromStorage);
   let email;
-  if (state != null) {
+  if (state != null && state.email != undefined) {
     email = state.email;
-    while (email.email != undefined) {
+    while (email != undefined && email.email != undefined) {
       email = email.email;
     }
   } else {

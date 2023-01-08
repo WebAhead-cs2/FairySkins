@@ -4,6 +4,7 @@ import Login from "./loginPage/componentLogin";
 import Profile from "./profilePage/componentProfile";
 import Cart from "./cartPage/componentCart";
 import History from "./historyPage/componentHistory";
+import Payment from "./paymentPage/componentPayment";
 import "./App.css";
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -43,6 +44,7 @@ function App() {
         <Route exact path="/profile" element={<Profile />} />
         <Route exact path="/history" element={<History />} />
         <Route exact path="/cart" element={<Cart />} />
+        <Route exact path="/payment" element={<Payment />} />
       </Routes>
     </main>
   );

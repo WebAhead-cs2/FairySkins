@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { getDefaultNormalizer } from "@testing-library/react";
 
 function Login() {
-  const [auth, setAuth] = useState(false);
+  const [auth, setAuth] = useState();
   const [email, setEmail] = useState("");
   const [password, setPass] = useState("");
 
@@ -51,7 +51,9 @@ function Login() {
           placeholder="********"
         />
         <br />
+        <PassWrong auth={auth}></PassWrong>
         <br />
+
         <button
           className="signup"
           type="submit"
@@ -65,14 +67,24 @@ function Login() {
         </button>
 
         <br />
-        <ForApp auth={auth} email={email}></ForApp>
 
+        <ForApp auth={auth} email={email}></ForApp>
+        <></>
         <p className="txt">
           <Link to="/signup">Don't have an account?</Link>
         </p>
       </form>
     </>
   );
+}
+function PassWrong({ auth }) {
+  if (auth == false) {
+    return (
+      <h className="PassWrong">
+        Your email or password is incorrect Please try again
+      </h>
+    );
+  }
 }
 async function checkUser(email, password) {
   console.log(email);

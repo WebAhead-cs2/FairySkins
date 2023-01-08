@@ -35,7 +35,7 @@ function Navbar(email) {
 }
 function RightIcons(email) {
   if (email.email.email == undefined) {
-    console.log("righticon");
+    //console.log("righticon");
     return (
       <div className="Right">
         <img

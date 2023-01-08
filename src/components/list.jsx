@@ -13,12 +13,13 @@ const PAGE_CART = "/cart";
 const cartFromStorage = JSON.parse(localStorage.getItem("cart") || "[]");
 
 function List({ catFilter, priceFilter, state }) {
+  const [query, setQuery] = useState("");
   const [email, setEmail] = React.useState("");
   let email1;
   useEffect(() => {
     if (state != undefined) {
       email1 = state.email;
-      while (email1.email != undefined) {
+      while (email1 != undefined && email1.email != undefined) {
         email1 = email1.email;
       }
       console.log(email1);
@@ -64,10 +65,25 @@ function List({ catFilter, priceFilter, state }) {
   return (
     <div>
       {/* <button onClick={()=> navigate(PAGE_CART)} >cart {cart.length}</button> */}
-
+      <div className="searchProduct">
+        <input
+          type="text"
+          placeholder="Search....."
+          className="word"
+          onChange={(e) => setQuery(e.target.value)}
+        />
+        <ul className="list">
+          {/* {data
+            .filter((item) => item.name.includes(query))
+            .map((item) => (
+              <li key={user.id}>{item.name}</li>
+            ))} */}
+        </ul>
+      </div>
       <ProductList
         catFilter={catFilter}
         priceFilter={priceFilter}
+        query={query}
         addToCart={addToCart}
         email={email}
       />
