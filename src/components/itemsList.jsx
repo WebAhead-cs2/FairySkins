@@ -1,5 +1,6 @@
 import "./styleItemsList.css";
 //import data from "../data.js";
+import ProductList from "./productList";
 let data = [];
 let executed = false;
 function ItemsList({ catFilter, priceFilter }) {
@@ -48,10 +49,10 @@ function Products({ catFilter, priceFilter }) {
 
   return (
     <ul className="grid">
-      <ProductsCards
+      <ProductList
         catFilter={catFilter}
         priceFilter={priceFilter}
-      ></ProductsCards>
+      ></ProductList>
       {/* {productsList.length ? (
           productsList
         ) :
@@ -62,35 +63,36 @@ function Products({ catFilter, priceFilter }) {
     </ul>
   );
 }
-function ProductsCards({ catFilter, priceFilter }) {
-  const [minPrice, maxPrice] = priceFilter;
-  console.log(catFilter);
-  console.log(data);
-  let productsList = data
-    .filter((item) => catFilter === "all" || catFilter === item.category)
-    .filter(
-      (item) =>
-        Number(item.price.substring(1)) >= minPrice &&
-        Number(item.price.substring(1)) <= maxPrice
-    )
-    .map((item) => (
-      <li class="card" name={item.id}>
-        <div class="product-img">
-          <img src={item.image} alt="makeup"></img>
-        </div>
-        <div class="item-name">
-          <p>{item.category}</p>
-          <h3>{item.name}</h3>
-          <p>{item.price}</p>
-          <a href="#" class="buy-btn">
-            <img
-              class="cartIcon"
-              src="https://cdn-icons-png.flaticon.com/128/2438/2438133.png"
-            ></img>
-          </a>
-        </div>
-      </li>
-    ));
-  return productsList;
-}
+
+// function ProductsCards({ catFilter, priceFilter }) {
+//   const [minPrice, maxPrice] = priceFilter;
+//   console.log(catFilter);
+//   console.log(data);
+//   let productsList = data
+//     .filter((item) => catFilter === "all" || catFilter === item.category)
+//     .filter(
+//       (item) =>
+//         Number(item.price.substring(1)) >= minPrice &&
+//         Number(item.price.substring(1)) <= maxPrice
+//     )
+//     .map((item) => (
+//       <li class="card" name={item.id}>
+//         <div class="product-img">
+//           <img src={item.image} alt="makeup"></img>
+//         </div>
+//         <div class="item-name">
+//           <p>{item.category}</p>
+//           <h3>{item.name}</h3>
+//           <p>{item.price}</p>
+//           <a href="#" class="buy-btn">
+//             <img
+//               class="cartIcon"
+//               src="https://cdn-icons-png.flaticon.com/128/2438/2438133.png"
+//             ></img>
+//           </a>
+//         </div>
+//       </li>
+//     ));
+//   return productsList;
+// }
 export default ItemsList;

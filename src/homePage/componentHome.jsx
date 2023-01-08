@@ -1,26 +1,24 @@
-import'./homePageCss.css';
-import Navbar from '../components/navbar';
-import ItemsList from '../components/itemsList';
+import "./homePageCss.css";
+import Navbar from "../components/navbar";
+import ItemsList from "../components/itemsList";
+import List from "../components/list";
+
 import CategoryFilter from "../components/categoryFilter";
 import PriceFilter from "../components/priceFilter";
 import React from "react";
 import { Navigate } from "react-router-dom";
-import {useLocation} from 'react-router-dom';
-function Home()
+import { useLocation } from "react-router-dom";
+function Home() {
+  const { state } = useLocation();
 
-{  
-    const {state} = useLocation();
-    console.log(state);
-    const [catFilter, setCatFilter] = React.useState("all");
-    const [priceFilter, setPriceFilter] = React.useState([10,100]);
-    return(
+  const [catFilter, setCatFilter] = React.useState("all");
+  const [priceFilter, setPriceFilter] = React.useState([10, 100]);
+  return (
     <main>
-  
-    {CorrectNavbar(state)}
-    <section className="filters">
-        <h1>m</h1>
+      {CorrectNavbar(state)}
+      <section className="filters">
         <form>
-        <PriceFilter
+          <PriceFilter
             priceFilter={priceFilter}
             setPriceFilter={setPriceFilter}
           />
@@ -28,25 +26,19 @@ function Home()
         </form>
       </section>
 
-    <section className="listProducts">
-    <ItemsList catFilter={catFilter} priceFilter={priceFilter}/>
-    </section>
+      <section className="listProducts">
+        {/* <ItemsList catFilter={catFilter} priceFilter={priceFilter} /> */}
+        <List catFilter={catFilter} priceFilter={priceFilter} state={state} />
+      </section>
     </main>
-   
-)
+  );
 }
-export function CorrectNavbar(state)
-{
-  if(state!=null)
-  {
-    const { email } = state; 
-  console.log(email);
-  return(<Navbar email={email}/>)
-}
-  else
-  return(<Navbar email={null}/>)
-}
+export function CorrectNavbar(state) {
+  if (state != null) {
+    const { email } = state;
 
+    return <Navbar email={email} />;
+  } else return <Navbar email={null} />;
+}
 
 export default Home;
-

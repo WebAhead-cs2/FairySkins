@@ -14,7 +14,7 @@ CREATE TABLE users (
     product_id VARCHAR(255),
     image VARCHAR(255),
     name VARCHAR(255), 
-    price VARCHAR(255),
+    price NUMERIC NOT NULL,
     category VARCHAR(255)
 );
  CREATE TABLE history(
@@ -23,7 +23,7 @@ CREATE TABLE users (
     product_id VARCHAR(255),
     image VARCHAR(255),
     name VARCHAR(255), 
-    price VARCHAR(255),
+    price NUMERIC NOT NULL,
     category VARCHAR(255)
 );
  CREATE TABLE cart(
@@ -32,7 +32,7 @@ CREATE TABLE users (
     product_id VARCHAR(255),
     image VARCHAR(255),
     name VARCHAR(255), 
-    price VARCHAR(255),
+    price NUMERIC NOT NULL,
     category VARCHAR(255)
 );
 

@@ -103,7 +103,7 @@ function ForApp(prop) {
     //return(<Navigate replace to="/home"/>)
     console.log("yep!");
     console.log(prop.email);
-    return navigate("/home", { state: { email: prop.email } });
+    return navigate("/", { state: { email: prop.email } });
     //return(navigate('/home'))
   } else {
     return null;

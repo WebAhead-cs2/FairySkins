@@ -32,12 +32,12 @@ async function fetchSaveProducts() {
   }
 }
 function App() {
-  fetchSaveProducts();
+  //fetchSaveProducts();
   return (
     <main>
       <Routes>
         <Route exact path="/app" element={<App />} />
-        <Route exact path="/home" element={<Home />} />
+        <Route exact path="/" element={<Home />} />
         <Route exact path="/signup" element={<Signup />} />
         <Route exact path="/login" element={<Login />} />
         <Route exact path="/profile" element={<Profile />} />

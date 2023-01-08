@@ -16,7 +16,7 @@ function Navbar(email) {
               </h2>
             </div>
             <div className="Center">
-              <Link to="/home" state={email} className="MenuItem">
+              <Link to="/" state={email} className="MenuItem">
                 Products
               </Link>
               <Link to="/profile" state={email} className="MenuItem">
@@ -66,7 +66,7 @@ function RightIcons(email) {
           className="signupimage"
           src="https://cdn-icons-png.flaticon.com/128/2838/2838895.png"
         ></img>
-        <Link to="/cart">
+        <Link to="/cart" state={email} className="MenuItem">
           <button className="userb" variant="contained">
             Your cart
           </button>
@@ -76,7 +76,7 @@ function RightIcons(email) {
           className="loginimage"
           src="https://cdn-icons-png.flaticon.com/128/992/992680.png"
         ></img>
-        <Link state={null} to="/home">
+        <Link state={null} to="/" onClick={() => window.location.reload()}>
           <button className="userb" variant="contained">
             log out
           </button>
