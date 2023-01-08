@@ -1,9 +1,11 @@
 import React from "react";
-
+import "./stylePriceFilter.css";
 function PriceFilter({ priceFilter, setPriceFilter }) {
   return (
     <fieldset>
-      <legend><strong>Price</strong></legend>
+      <legend>
+        <strong>Price</strong>
+      </legend>
       <label htmlFor="min-price">
         Min price
         <input
@@ -13,7 +15,7 @@ function PriceFilter({ priceFilter, setPriceFilter }) {
           max="100"
           step="20"
           value={priceFilter[0]}
-          onChange={e => setPriceFilter([e.target.value, priceFilter[1]])}
+          onChange={(e) => setPriceFilter([e.target.value, priceFilter[1]])}
         />
       </label>
       <label htmlFor="max-price">
@@ -25,7 +27,7 @@ function PriceFilter({ priceFilter, setPriceFilter }) {
           max="100"
           step="20"
           value={priceFilter[1]}
-          onChange={e => setPriceFilter([priceFilter[0], e.target.value])}
+          onChange={(e) => setPriceFilter([priceFilter[0], e.target.value])}
         />
       </label>
     </fieldset>
